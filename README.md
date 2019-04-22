@@ -2,7 +2,7 @@
 
 ![Alt text](src/images/github/Dalat-Milk.png "DalatMilk")
 
-Chuỗi cung ứng sữa giúp chúng ta(người sử dụng) biết chính xác sản phẩm sản xuất ở trang trại nào thuộc giống bò nào, ngày lấy sữa và thành phần bổ sung đối với từng loại sữa ở nhà máy nào. Tránh được tình trạng hàng dã hàng nhái trên thị trường.
+Chuỗi cung ứng sữa giúp chúng ta(người sử dụng) biết chính xác sản phẩm sản xuất ở trang trại nào thuộc giống bò nào, ngày lấy sữa và thành phần bổ sung đối với từng loại sữa ở nhà máy nào. Tránh được tình trạng hàng giả hàng nhái trên thị trường.
 
 Dự án được phát triển tại công ty [Lampart Co.Ltd](https://lampart-vn.com/).
 
