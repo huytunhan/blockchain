@@ -1,0 +1,130 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Trang Trại
+        <small>Trình Quản Lý</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Trang Chủ</a></li>
+        <li class="active">Trang Trại</li>
+    </ol>
+</section>
+<section class="invoice">
+    <!-- title row -->
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="page-header">
+                <i class="fa fa-globe"></i> Thông Tin Trang Trại
+                <small class="pull-right">Ngày tham gia: 2/10/2014</small>
+            </h2>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- info row -->
+    <div class="row invoice-info">
+        <div class="col-sm-4 invoice-col">
+            <strong>Address: </strong> <span id="address_farm_info"></span>
+            <address>
+                <strong>Tên trang trại: </strong> <span id="name_farm_info"></span><br>
+                <strong>Địa chỉ: </strong> <span id="location_farm_info"></span><br>
+            </address>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Table row -->
+    <div class="row">
+        <div class="col-xs-12 table-responsive">
+            <h3>Danh sách các đợt sữa</h3>
+            <table id="tbl-farm" class="table table-striped">
+
+            </table>
+            <div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="btn-add-milk-form">Thêm đợt sữa mới</button>
+            </div>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+<!-- Main content -->
+<section class="content">
+<div class="row">
+
+</div>
+</section>
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Thêm lô sữa mới</h4>
+            </div>
+            <!--<div class="modal-body">-->
+                <!--<div>-->
+                    <!--<p>Address Farm: <input type="text" placeholder="Address Farm" id="txt_add_address_farm" name="txt_add_address_farm"/></p>-->
+                    <!--<p>Số lượng (lít): <input type="number" placeholder="quantity (l)" id="txt_add_address_farm" name="txt_add_quantity_milk"/></p>-->
+                    <!--<p>Giống bò: <input type="text" placeholder="cow" id="txt_add_cow_milk" name="txt_add_cow_milk"/></p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="register-box-body">
+                <div class="form-group has-feedback">
+                    <p>Address Farm: </p>
+                    <input type="text" class="form-control" placeholder="" id="txt_add_address_farm" readonly>
+                    <span class="glyphicon glyphicon-oil form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <p>Số lượng (lít): </p>
+                    <input type="number" class="form-control" placeholder="" id="txt_add_quantity_milk">
+                    <span class="glyphicon glyphicon-oil form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <p>Xuất cho nhà máy: </p>
+                    <select class="form-control" id="slt_factory">
+                        <option value="">Chọn nhà máy</option>
+                    </select>
+                    <span class="glyphicon glyphicon-oil form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <p>Giống bò:  </p>
+                    <input type="text" class="form-control" placeholder="" id="txt_add_cow_milk">
+                    <span class="glyphicon glyphicon-oil form-control-feedback"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="btn-add-milk" class="btn btn-primary btn-block btn-flat" data-dismiss="modal">Thêm</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--<div id="myModal" class="modal fade" role="dialog">-->
+    <!--<div class="modal-dialog">-->
+
+        <!--&lt;!&ndash; Modal content&ndash;&gt;-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-header">-->
+                <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                <!--<h4 class="modal-title">Thông tin nhà máy (0xe8c15ECe6E3c6B78a3285155775C44676F31EF3d)</h4>-->
+            <!--</div>-->
+            <!--<div class="modal-body">-->
+                <!--<div>-->
+                    <!--<p>Tên nhà máy: Đà Lạt</p>-->
+                    <!--<p>Địa chỉ: 21k Nguyễn Văn Trỗi, P12, Q.Phú Nhuận, TPHCM</p>-->
+                    <!--<p>Những sản phẩm: Sữa Vinamilk, Sữa Chua.</p>-->
+                <!--</div>-->
+                <!--<div style="text-align: center;">-->
+                    <!--<img style="margin: 0 auto" src="data/img/factory/Location_Vinamilk.PNG"/>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+<!--</div>-->
+<!-- /.content -->
+<script src="js/pages/farm.js"></script>

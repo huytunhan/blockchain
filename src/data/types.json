@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Sữa Chai",
+    "picture": "data/img/types/sua-chai.png",
+    "quantitative": "thùng"
+  },
+  {
+    "id": 2,
+    "name": "Sữa Hộp",
+    "picture": "data/img/types/sua-hop.png",
+    "quantitative": "chai"
+  },
+  {
+    "id": 3,
+    "name": "Sữa Chua",
+    "picture": "data/img/types/sua-chua.png",
+    "quantitative": "thùng"
+  }
+]

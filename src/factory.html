@@ -1,0 +1,149 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Nhà Máy
+        <small>Trình Quản Lý</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Trang Chủ</a></li>
+        <li class="active">Nhà Máy</li>
+    </ol>
+</section>
+<section class="invoice">
+    <!-- title row -->
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="page-header">
+                <i class="fa fa-globe"></i> Thông Tin Nhà Máy
+                <small class="pull-right">Ngày tham gia: 2/10/2014</small>
+            </h2>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- info row -->
+    <div class="row invoice-info">
+        <div class="col-sm-6 invoice-col">
+            <address>
+                <strong>Address: </strong> <span data-factory="address"></span><br>
+                <strong>Tên nhà máy: </strong> <span data-factory="name"></span><br>
+                <strong>Địa chỉ: </strong> <span data-factory="location"></span><br>
+            </address>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Table row -->
+    <div class="row">
+        <div class="col-xs-12 table-responsive">
+            <h3>Danh sách các sản phẩm đã xuất</h3>
+            <table class="table table-striped table-hover" id="table-data">
+
+            </table>
+            <div>
+                <button type="button" data-toggle="modal" data-target="#modal-add-product" class="btn btn-primary">
+                    Thêm đợt sản phẩm mới
+                </button>
+            </div>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+    </div>
+</section>
+<div id="modal-add-product" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #0b93d5; color: white">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Thêm Sản Phẩm Mới</h4>
+            </div>
+            <div class="modal-body" style="padding: 0 20px">
+                <form class="form-horizontal">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>ID Sữa</label>
+                            <div>
+                                <input type="number" class="form-control" data-add="idMilk" placeholder="Nhập ID Sữa">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Id Type</label>
+                            <div>
+                                <select class="form-control" data-add="idType">
+                                    <option value="">--Chọn loại sản phẩm--</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Số Lượng</label>
+                            <div>
+                                <input type="number" class="form-control" data-add="quantity"
+                                       placeholder="Nhập số lượng">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Ngày Hết Hạng</label>
+                            <div>
+                                <input type="text" id="datepicker" class="form-control" data-add="dateEnd"
+                                       placeholder="Nhập ngày hết hạng">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Thành Phần Bổ Sung</label>
+                            <div>
+                                <textarea rows="4" cols="50" data-add="ingredients" placeholder="Nhập thành phần bổ sung" style="width: 100%">
+
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Đóng</button>
+                <button type="button" id="btn-add-product" class="btn btn-primary">Thêm</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-show-milk" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Thông tin trang trại</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <p><b>Address:</b> 0xe8c15ECe6E3c6B78a3285155775C44676F31EF3d</p>
+                    <p><b>Tên trang trại:</b> Long Thành</p>
+                    <p><b>Địa chỉ:</b> 21k Nguyễn Văn Trỗi, P12, Q.Phú Nhuận, TPHCM</p>
+                    <p><b>Những giống bò ở đây:</b> Bò Mỹ, Bò Việt Nam</p>
+                    <p><b>Ngày lấy sữa:</b> 03/27/2019</p>
+                </div>
+                <div style="text-align: center;">
+                    <img style="margin: 0 auto; width: 560px" src="data/img/factory/Location_Vinamilk.PNG"/>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="datepicker datepicker-dropdown dropdown-menu datepicker-orient-left datepicker-orient-top" style="top: 1188px; left: 293px; z-index: 10; display: block;"><div class="datepicker-days" style=""><table class="table-condensed"><thead><tr><th colspan="7" class="datepicker-title" style="display: none;"></th></tr><tr><th class="prev">«</th><th colspan="5" class="datepicker-switch">March 2019</th><th class="next">»</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="old day" data-date="1550966400000">24</td><td class="old day" data-date="1551052800000">25</td><td class="old day" data-date="1551139200000">26</td><td class="old day" data-date="1551225600000">27</td><td class="old day" data-date="1551312000000">28</td><td class="day" data-date="1551398400000">1</td><td class="day" data-date="1551484800000">2</td></tr><tr><td class="day" data-date="1551571200000">3</td><td class="day" data-date="1551657600000">4</td><td class="active day" data-date="1551744000000">5</td><td class="day" data-date="1551830400000">6</td><td class="day" data-date="1551916800000">7</td><td class="day" data-date="1552003200000">8</td><td class="day" data-date="1552089600000">9</td></tr><tr><td class="day" data-date="1552176000000">10</td><td class="day" data-date="1552262400000">11</td><td class="day" data-date="1552348800000">12</td><td class="day" data-date="1552435200000">13</td><td class="day" data-date="1552521600000">14</td><td class="day" data-date="1552608000000">15</td><td class="day" data-date="1552694400000">16</td></tr><tr><td class="day" data-date="1552780800000">17</td><td class="day" data-date="1552867200000">18</td><td class="day" data-date="1552953600000">19</td><td class="day" data-date="1553040000000">20</td><td class="day" data-date="1553126400000">21</td><td class="day" data-date="1553212800000">22</td><td class="day" data-date="1553299200000">23</td></tr><tr><td class="day" data-date="1553385600000">24</td><td class="day" data-date="1553472000000">25</td><td class="day" data-date="1553558400000">26</td><td class="day" data-date="1553644800000">27</td><td class="day" data-date="1553731200000">28</td><td class="day" data-date="1553817600000">29</td><td class="day" data-date="1553904000000">30</td></tr><tr><td class="day" data-date="1553990400000">31</td><td class="new day" data-date="1554076800000">1</td><td class="new day" data-date="1554163200000">2</td><td class="new day" data-date="1554249600000">3</td><td class="new day" data-date="1554336000000">4</td><td class="new day" data-date="1554422400000">5</td><td class="new day" data-date="1554508800000">6</td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">Today</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th colspan="7" class="datepicker-title" style="display: none;"></th></tr><tr><th class="prev">«</th><th colspan="5" class="datepicker-switch">2019</th><th class="next">»</th></tr></thead><tbody><tr><td colspan="7"><span class="month">Jan</span><span class="month">Feb</span><span class="month focused active">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">Today</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th colspan="7" class="datepicker-title" style="display: none;"></th></tr><tr><th class="prev">«</th><th colspan="5" class="datepicker-switch">2010-2019</th><th class="next">»</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year active focused">2019</span><span class="year new">2020</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">Today</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datepicker-decades" style="display: none;"><table class="table-condensed"><thead><tr><th colspan="7" class="datepicker-title" style="display: none;"></th></tr><tr><th class="prev">«</th><th colspan="5" class="datepicker-switch">2000-2090</th><th class="next">»</th></tr></thead><tbody><tr><td colspan="7"><span class="decade old">1990</span><span class="decade">2000</span><span class="decade active focused">2010</span><span class="decade">2020</span><span class="decade">2030</span><span class="decade">2040</span><span class="decade">2050</span><span class="decade">2060</span><span class="decade">2070</span><span class="decade">2080</span><span class="decade">2090</span><span class="decade new">2100</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">Today</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div><div class="datepicker-centuries" style="display: none;"><table class="table-condensed"><thead><tr><th colspan="7" class="datepicker-title" style="display: none;"></th></tr><tr><th class="prev">«</th><th colspan="5" class="datepicker-switch">2000-2900</th><th class="next">»</th></tr></thead><tbody><tr><td colspan="7"><span class="century old">1900</span><span class="century active focused">2000</span><span class="century">2100</span><span class="century">2200</span><span class="century">2300</span><span class="century">2400</span><span class="century">2500</span><span class="century">2600</span><span class="century">2700</span><span class="century">2800</span><span class="century">2900</span><span class="century new">3000</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today" style="display: none;">Today</th></tr><tr><th colspan="7" class="clear" style="display: none;">Clear</th></tr></tfoot></table></div></div>
+<!-- /.content -->
+<script src="js/pages/factory.js"></script>

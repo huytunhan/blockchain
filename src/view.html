@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kiểm tra thông tin | Đà Lạt Milk</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition layout-boxed skin-blue layout-top-nav">
+<div class="wrapper">
+    <header class="main-header">
+        <nav class="navbar navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand"><b>Đà Lạt</b> Milk</a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <!-- Menu toggle button -->
+                            <a href="view.html" class="dropdown-toggle">
+                                <i class="fa fa-check"></i> Kiểm Tra Sản Phẩm
+                            </a>
+                        </li>
+                        <li class="dropdown" data-home="login" style="display: none">
+                            <!-- Menu toggle button -->
+                            <a href="login.html" class="dropdown-toggle">
+                                <i class="fa fa-sign-in"></i> Đăng Nhập
+                            </a>
+                        </li>
+                        <li class="dropdown" data-home="register" style="display: none">
+                            <!-- Menu toggle button -->
+                            <a href="login.html" class="dropdown-toggle">
+                                <i class="fa fa-window-close-o"></i> Đăng Ký
+                            </a>
+                        </li>
+                        <li class="dropdown" data-home="loged" style="display: none">
+                            <!-- Menu toggle button -->
+                            <a href="#" class="dropdown-toggle">
+                                <i class="fa fa-user"></i> Trang Quản Lý
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-custom-menu -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+    <!-- Full Width Column -->
+    <div class="content-wrapper">
+        <div class="container">
+            <!-- Content Header (Page header) -->
+            <section class="content-header text-center">
+                <h1>
+                    Kiểm tra thông tin sản phẩm
+                </h1>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <div class="input-group input-group-sm">
+                                    <input type="text" class="form-control" id="chk-idproduct" placeholder="Nhập ID-Product">
+                                    <span class="input-group-btn">
+                                  <button type="button" id="bth-chk-idproduct" class="btn btn-info btn-flat">Kiểm Tra</button>
+                                </span>
+                                </div>
+                            </div>
+                            <div class="box-body">
+                                <div class="callout callout-info" id="msg-info">
+                                    <h4>Nhập ID-Product được dán trên sản phẩm!</h4>
+
+                                    <p>Để kiểm tra thông tin sản phẩm bạn cần quét mã vạch để xuất ra ID-Product và tiến hành nhập ở khung trên!</p>
+                                </div>
+                                <div class="box-body box-profile" id="div-infos-pro" style="display: none">
+                                    <img class="profile-user-img img-responsive img-circle" data-product="pro_img" style="width: 300px" alt="User profile picture">
+
+                                    <h3 class="profile-username text-center" data-product="pro_typeName"></h3>
+
+                                    <p class="text-muted text-center" data-product="pro_id">Id-Product: 1</p>
+
+                                    <div class="box box-primary">
+                                        <div class="box-header with-border">
+                                            <h3 class="box-title">Thông tin sản phẩm của bạn</h3>
+                                        </div>
+                                        <!-- /.box-header -->
+                                        <div class="box-body">
+                                            <strong><i class="fa fa-home margin-r-5"></i> Thông tin Trang Trại và nguồn sữa</strong>
+                                            <div class="table-responsive text-muted">
+                                                <table class="table">
+                                                    <tbody>
+                                                    <tr>
+                                                        <th style="width:30%">Address</th>
+                                                        <td data-product="far_address"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Tên Trang Trại</th>
+                                                        <td data-product="far_name"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Địa chỉ</th>
+                                                        <td data-product="far_location">101B Huỳnh Thúc Kháng, P.An Khánh, Q.Ninh Kiều, TP.Cần Thơ.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Bò lấy sữa</th>
+                                                        <td data-product="far_nameCows"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Ngày lấy sữa</th>
+                                                        <td data-product="far_dateMilk"></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <hr>
+
+                                            <strong><i class="fa fa-industry margin-r-5"></i> Thông tin Nhà Máy và thành phần bổ sung</strong>
+                                            <div class="table-responsive text-muted">
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th style="width:30%">Address</th>
+                                                            <td data-product="fac_address"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Tên Nhà Máy</th>
+                                                            <td data-product="fac_name"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Địa chỉ</th>
+                                                            <td data-product="fac_location">28/41 Lê Thị Hồng, P.17, Q.Gò Vấp, TP.HCM.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Ngày sản xuất</th>
+                                                            <td data-product="fac_dateCreate"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Ngày hết hạng</th>
+                                                            <td data-product="fac_dateEnd"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Thành phần bổ sung</th>
+                                                            <td data-product="fac_ingredients"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!-- /.box-body -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.4.0
+            </div>
+            <strong>Copyright &copy; 2019-2023 <a href="https://adminlte.io">Blockchain DalatMilk</a>.</strong> All rights
+            reserved.
+        </div>
+        <!-- /.container -->
+    </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<script src="../../js/web3.min.js"></script>
+<script src="../../js/truffle-contract.js"></script>
+<script src="../../js/reload_view.js"></script>
+<script src="../../js/setting.js"></script>
+<script src="../../js/pages/view.js"></script>
+</body>
+</html>

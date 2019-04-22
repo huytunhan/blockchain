@@ -1,0 +1,113 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>Cửa hàng
+        <small>Trình Quản Lý</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Trang Chủ</a></li>
+        <li class="active">Cửa hàng</li>
+    </ol>
+</section>
+<section class="invoice">
+    <!-- title row -->
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="page-header">
+                <i class="fa fa-globe"></i> Thông Tin Cửa Hàng
+                <small class="pull-right">Ngày tham gia: <span id="createdDate"></span></small>
+            </h2>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- info row -->
+    <div class="row invoice-info">
+        <div class="col-sm-6 invoice-col">
+            <strong>Address: </strong> <span id="address"></span>
+            <address>
+                <strong>Tên cửa hàng: </strong> <span id="storeName"></span><br>
+                <strong>Địa chỉ: </strong> <span id="storeAddress"></span><br>
+            </address>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Chỉnh sửa thông tin
+            </button>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Table row -->
+    <div class="row">
+        <div class="col-xs-12 table-responsive">
+            <h3>Danh sách sản phẩm</h3>
+            <table class="table table-striped" id="table-data"></table>
+            <div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProduct">Thêm đợt sản
+                    phẩm mới
+                </button>
+            </div>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+
+    </div>
+</section>
+
+<!-- Modal Edit Store -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Thông tin cửa hàng</h4>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <label>Address</label>
+                    <p id="labelAddress"></p>
+                </div>
+
+                <div class="form-group">
+                    <label>Tên cửa hàng</label>
+                    <input class="form-control" type="text" title="" id="inputStoreName">
+                </div>
+                <div class="form-group">
+                    <label>Địa chỉ</label>
+                    <input class="form-control" type="text" title="" id="inputStoreAddress">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" onclick="Store.updateData()">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Edit Store -->
+<div class="modal fade" id="modalProduct" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Thông tin sản phẩm</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>ID sản phẩm</label>
+                    <input class="form-control" type="text" title="" id="productId">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" onclick="Store.addProduct()">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.content -->
+<script src="js/pages/store.js"></script>
